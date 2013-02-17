@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Имморталитас</title>
+            <link rel="stylesheet" href="datepicker.css" type="text/css" />
+          <link rel="stylesheet" href="style.css"> 
+          <script type="text/javascript" src="js/jquery.min.js"></script>
+          <script type="text/javascript" src="js/slideshow.js"></script>
+          <script type="text/javascript" src="js/datepicker.js"></script>
+          <script type="text/javascript" src="js/eye.js"></script>
+          <script type="text/javascript" src="js/utils.js"></script>
+          <script type="text/javascript" src="js/layout.js?ver=1.0.2"></script>
+          <script type="text/javascript">
+            jQuery('#date2').DatePicker({
+                flat: true,
+                date: ['2008-07-31', '2008-07-28'],
+                current: '2008-07-31',
+                format: 'Y-m-d',
+                calendars: 1,
+                mode: 'multiple',
+                onRender: function(date) {
+                    return {
+                        disabled: (date.valueOf() < now.valueOf()),
+                        className: date.valueOf() == now2.valueOf() ? 'datepickerSpecial' : false
+                    }
+                },
+                starts: 0
+            });
+          </script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+             <div class="header" >
+                <h1 class="logo"><a href="#"><img src="img/logo.png" alt="logo" /></a></h1>
+                <fieldset class="login">
+                    <form action="/tryit/html/htmlform_submit.php">
+                        <div><input class="name" type="text" name="fname" value="Логин" onclick="this.value='';" onfocus="this.value='';" id="fname" /></div>
+                        <div><input class="password" type="text" name="password" value="Пароль" onclick="this.value='';" onfocus="this.value='';" id="password" /></div>
+                        <div> <input class="submit" type="submit" value="Вход" id="enter" /></div>
+                        <div class="linc"> <a href="#">Регистрация</a></div>
+                        <div class="linc"><a href="#">Забыли?</a></div>
+                    </form>
+                </fieldset>
+                    <div class="imm"><h2>Имморталитас</h2></div> 
+                    <div class="immright"><h2>IMMORTALITAS</h2></div>
+                <fieldset class="basket">
+                    <input class="search" type="text" name="search" value="Поиск" id="search" />
+                    <a href="#" class="kons" ><img src="img/konsyltant.png" /></a>
+                            <p>Покупок 0/0</p>
+                            <a href="#">В корзину</a>
+                            <img class="basket1"  src="img/basket1.png" alt="basket"/>
+                </fieldset> 
+            </div>
+            <div class="main-nav">
+                <ul id="nav">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Обучение</a>
+                        <ul class="drop">
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Вводный курс</a></li>
+                            <li><a href="#">Регулярные занятия</a></li>
+                            <li><a href="#">Модульные системы</a></li>
+                            <li><a href="#">Выездные мероприятия</a></li>
+                            <li><a href="#">Коуч-сессии</a></li>
+                            <li><a href="#">Вебинары</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Мастерская</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Интересное</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </div>
+                <div class="shadow">
+                    <div class="slideshow">
+                        <span class="control" id="leftControl">Clicking moves left</span>
+                        <div class="slidesContainer">
+                            <div class="slide">
+                                <img src="img/01.jpg" width="900" alt="image" />
+                            </div>
+                            <div class="slide">
+                                <img src="img/02.jpg" width="900" alt="image" />
+                            </div>
+                            <div class="slide">
+                                <img src="img/03.jpg" width="900" alt="image" />
+                            </div>
+                        </div>
+                        <span class="control" id="rightControl">Clicking moves right</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="leftcolumn">
+                        <div class="item">
+                            <div class="title-holder"> <h3>Календарь</h3></div>
+                            <p id="date2"></p>
+                        </div>
+                        <div class="item">
+                            <div class="title-holder"><h3>ближайшие мероприятия</h3></div>
+                                <ul class="developments">
+                                    <li><a href="#">6 марта - коуч тренинг</a></li>
+                                    <li><a href="#">8 марта - курсы взаимо  отношений</a></li>
+                                    <li><a href="#">15 марта - что-то ещё</a></li>
+                                    <li><a href="#">21 марта - что-то ещё</a></li>
+                                </ul>
+                        </div>
+                        <div class="item">
+                            <div class="title-holder"><h3>клиенты о нас</h3></div>
+                                <ul class="developments">
+                                    <li><a href="#">Я очень благодарна, создателям ресурса ... </a></li>
+                                    <li><a href="#">Коуч-тренниги это то, что я давно искал...</a></li>
+                                    <li><a href="#">Советую всем посетить курсы ..</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="item">
+                            <h4>Проект «ИММОРТАЛИТАС»</h4>
+                            <img src="img/img.png" alt="image" />
+                            <p>Уважаемые друзься и гости нашего сайта, Мы рады сообщить Вам о запуске проекта «Имморталитас»...
+бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-блабла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-</p>
+                            <a href="#">Подробнее...</a>
+                        </div>
+                        
+                        <div class="item">
+                            <h4>Проект «ИММОРТАЛИТАС»</h4>
+                            <img src="img/img.png" alt="image" />
+                            <p>Уважаемые друзься и гости нашего сайта, Мы рады сообщить Вам о запуске проекта «Имморталитас»...
+бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-блабла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-</p>
+                            <a href="#">Подробнее...</a>
+                        </div>
+                        
+                        <div class="item">
+                            <h4>Проект «ИММОРТАЛИТАС»</h4>
+                            <img src="img/img.png" alt="image" />
+                            <p>Уважаемые друзься и гости нашего сайта, Мы рады сообщить Вам о запуске проекта «Имморталитас»...
+бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-блабла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-</p>
+                            <a href="#">Подробнее...</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="rightcolumn">
+                        <div class="item">
+                            <div class="title-holder"><h3>Это интиресно</h3></div>
+                                <ul class="news">
+                                    <li><a href="#">
+                                        <img src="img/img1.jpg" alt="image" />
+                                        <p>Правила здорового питания, только здаровая пища...</p>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <img src="img/img3.jpg" alt="image" />
+                                        <p>Хатха йога позволяет управлять своими...</p>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <img src="img/img2.jpg" alt="image" />
+                                        <p>Коуч тренниг эффективный метод достижения успеха...</p>
+                                    </a></li>
+                                </ul>
+                        </div>
+                        <div class="item">
+                            <div class="title-holder"><h3>мастерские</h3></div>
+                                <ul class="master">
+                                    <li><a href="#">Искусство пяти стихий</a></li>
+                                    <li><a href="#">Обретение внутренней силы</a></li>
+                                    <li><a href="#">Динамические медитации</a></li>
+                                    <li><a href="#">Самореализация, самопознание, самовоспитание</a></li>
+                                    <li><a href="#">Энергия богатства и изобилия</a></li>
+                                    <li><a href="#">Эффективные коммуникации</a></li>
+                                    <li><a href="#">Мужчина и женщина –гармония инь и ян</a></li>
+                                    <li><a href="#">Сексуальная энергия -основа…!</a></li>
+                                </ul>
+                        </div>
+                        <div class="item">
+                            <div class="title-holder"><h3>свяжитесь с нами</h3></div>
+                                <div class="kontakt">
+                                    <ul>
+                                        <li>Наш телефон</li>
+                                        <li>в Санкт- Петербурге</li>
+                                        <li>7 - 921 - 358 - 51 -10</li>
+                                        <li>Наша почта</li>
+                                        <li>mariyasav@mail.ru</li>
+                                        <li>Скайп magiyay</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfloat"></div>
+                <div class="empty"></div>
+        </div>
+        <div class="footer-holder">
+            <div class="footer">
+                <div class="nav-holder">
+                    <div class="nav">
+                        <h5><a href="#">Центр обучения</a></h5>
+                            <ul>
+                                <li><a href="#">Вводные курсы</a></li>
+                                <li><a href="#">Расписание</a></li>
+                                <li><a href="#">Открытые трансляции</a></li>
+                                <li><a href="#">Акции и скидки</a></li>
+                            </ul>
+                     </div>
+                     <div class="nav">
+                        <h5><a href="#">Портнерам</a></h5>
+                            <ul>
+                                <li><a href="#">Стать партнерам</a></li>
+                                <li><a href="#">Кабинет партнера</a></li>
+                                <li><a href="#">Справочная информация</a></li>
+                                <li><a href="#">Рекламные материалы</a></li>
+                            </ul>
+                     </div>
+                     <div class="nav">
+                        <h5><a href="#">Клиентам</a></h5>
+                            <ul>
+                                <li><a href="#">Каталог тренингов</a></li>
+                                <li><a href="#">Как оформить заказ</a></li>
+                                <li><a href="#">Личный кабинет</a></li>
+                                <li><a href="#">Служба поддержки</a></li>
+                            </ul>
+                     </div>
+                     <div class="nav">
+                        <h5><a href="#">Разное</a></h5>
+                            <ul>
+                                <li><a href="#">Правило комипрования материалов</a></li>
+                                <li><a href="#">Использование платных материалов</a></li>
+                                <li><a href="#">Организаторам</a></li>
+                            </ul>
+                     </div>
+                 </div>
+                <p>ИММОРТАЛИТАС 2013</p>
+                
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
